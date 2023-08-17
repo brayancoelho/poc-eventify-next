@@ -17,7 +17,7 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
     if (idEditado) {
-      // Update existing music
+      
       axios.put(`https://64371cd28205915d340515d5.mockapi.io/musicas/${idEditado}`, {
         artista,
         nome,
@@ -34,7 +34,7 @@ export default function Home() {
         setNome('');
       });
     } else {
-      // Create new music
+      
       axios.post('https://64371cd28205915d340515d5.mockapi.io/musicas', {
         artista,
         nome,
